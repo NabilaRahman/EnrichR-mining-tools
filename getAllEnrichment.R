@@ -9,7 +9,7 @@ getAllEnrichment <- function(
   , pVal = 0.01) {
   
   output = list()
-  
+
   Data <- paste(goTYPE,direction, sep="." )
   assign( Data, data[[dbgo]] )
   assign( Data, get(Data)[get(Data)$Adjusted.P.value < pVal , ] )
